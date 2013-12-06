@@ -1,7 +1,7 @@
 env = PATH=$$PATH:node_modules/.bin
 
 install:
-	@mkdir {platforms,plugins}
+	@mkdir -p {platforms,plugins}
 	@npm install
 
 ios:;@$(env) phonegap run ios

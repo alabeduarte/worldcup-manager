@@ -1,5 +1,5 @@
 {
-  "name": "a_vaca",
+  "name": "worldcup-manager",
   "version": "1.0.0",
   "authors": [],
   "license": "MIT",
@@ -10,9 +10,8 @@
     "www/components"
   ],
   "dependencies": {
-    "angular": "1.2.0-rc.3",
-    "angular-route": "1.2.0-rc.3",
-    "angular-touch": "1.2.0-rc.3",
-    "open-sans-fontface": "latest"
+    "angular": "1.2.4",
+    "angular-route": "1.2.4",
+    "angular-touch": "1.2.4"
   }
 }

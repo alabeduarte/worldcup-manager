@@ -1,0 +1,1 @@
+angular.module('worldcup-manager', ['LocalStorageModule', 'X2JS']);
