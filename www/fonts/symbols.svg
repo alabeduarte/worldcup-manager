@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2013 by original authors @ fontello.com</metadata>
+<defs>
+<font id="symbols" horiz-adv-x="1000" >
+<font-face font-family="symbols" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="user-outline" unicode="&#xe800;" d="m313 689q-65 0-111-46t-46-110t46-111t111-46t110 46t46 111t-46 110t-110 46z m0 104q107 0 183-77t77-183t-77-184t-183-76t-184 76t-76 184t76 183t184 77z m0-677q-74 0-127-22t-72-54q75-29 199-29t197 29q-21 30-73 53t-124 23z m0 104q136 0 224-63t88-146q0-41-89-72t-223-32q-140 0-227 32t-86 72q0 83 86 146t227 63z" horiz-adv-x="625" />
+<glyph glyph-name="lock" unicode="&#xe803;" d="m298 116q0 68 67 68t68-68t-68-67t-67 67z m67 677q85 0 146-62t62-146l0-105l52 0q43 0 73-31t31-73l0-365q0-42-31-73t-73-31l-521 0q-44 0-74 31t-30 73l0 365q0 43 30 73t74 31l52 0l0 105q0 60 30 107t74 73q48 28 105 28z m0-104q-44 0-74-31t-31-73l0-156l209 0l0 156q0 44-31 74t-73 30z m260-678l0 365l-521 0l0-365l521 0z" horiz-adv-x="729" />
+<glyph glyph-name="calendar-outlilne" unicode="&#xe802;" d="m834 653q46-16 75-56t29-90l0-469q0-65-46-111t-111-46l-625 0q-65 0-110 46t-46 111l0 469q0 50 29 90t75 56l0 10q0 65 45 110t111 46t111-46t45-110l105 0q0 65 46 110t111 46t110-46t46-110l0-10z m-209 10l0-104q0-21 16-37t37-15t36 15t15 37l0 104q0 21-15 37t-36 15t-37-15t-16-37z m-416 0l0-104q0-21 15-37t36-15t37 15t16 37l0 104q0 21-16 37t-37 15t-36-15t-15-37z m625-625l0 312l-730 0l0-312q0-21 15-37t37-16l625 0q22 0 37 16t16 37z m0 365l0 104q0 21-16 36t-37 16q0-44-30-74t-73-31t-74 31t-31 74l-208 0q0-44-31-74t-74-31t-73 31t-31 74q-21 0-37-16t-15-36l0-104l730 0z" horiz-adv-x="938" />
+<glyph glyph-name="credit-card" unicode="&#xe801;" d="m729 688q65 0 110-46t46-110l0-364q0-65-46-111t-110-45l-573 0q-65 0-110 45t-46 111l0 364q0 65 46 110t110 46l573 0z m52-520l0 208l-677 0l0-208q0-21 15-37t37-15l573 0q21 0 37 15t15 37z m0 313l0 51q0 21-15 37t-37 15l-573 0q-21 0-37-15t-15-37l0-51l677 0z m-208-262q-25 0-25 27t25 26l105 0q25 0 25-26t-25-27l-105 0z" horiz-adv-x="885" />
+</font>
+</defs>
+</svg>

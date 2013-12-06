@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng:app="a.vaca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="components/open-sans-fontface/open-sans.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>A Vaca</title>
+  </head>
+  <body ng:controller="home">
+
+    <nav ng:if="view.menu">
+      <ol>
+        <li>Ver pasto</li>
+        <li>Sobre</li>
+      </ol>
+    </nav>
+
+    <main>
+      <header>
+        <input type="checkbox" id="menu" ng:model="view.menu"><label for="menu">☰</label>
+        <h1>A Vaca</h1>
+      </header>
+
+      <article ng:view></article>
+    </main>
+
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="components/angular/angular.js"></script>
+    <script type="text/javascript" src="components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="components/angular-touch/angular-touch.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

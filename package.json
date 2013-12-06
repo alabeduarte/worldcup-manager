@@ -1,0 +1,17 @@
+{
+  "name": "a_vaca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ios-sim": "~1.8.2",
+    "phonegap": "~3.1.0-0.15.0",
+    "bower": "~1.2.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "node_modules/.bin/bower install"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
