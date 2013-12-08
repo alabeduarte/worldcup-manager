@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@heroku.com:worldcup-manager.git"
+  },
   "dependencies": {
     "ios-sim": "~1.8.2",
     "phonegap": "~3.1.0-0.15.0",
