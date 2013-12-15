@@ -9,6 +9,13 @@
     <title>The Worldcup Manager</title>
   </head>
   <body ng:controller="Home">
+    <ol id="countries">
+      <li ng:repeat="country in countries">
+        <figure>
+          <img ng:src="{{ country.imageUrl }}" alt="{{ country.name }}" />
+        </figure>
+      </li>
+    </ol>
     <input type="search" placeholder="Player name" ng:model="searchTerm"><input type="number" ng:model="pageSize" max="100" min="1">
     <ol id="players" ng:init="pageSize=5" ng:init="page=0">
       <li ng:repeat="player in players | search:searchTerm | startFrom: page*pageSize | limitTo: pageSize">
@@ -27,7 +34,7 @@
     <script type="text/javascript" src="components/angular-touch/angular-touch.js"></script>
     <script type="text/javascript" src="components/angular-local-storage/angular-local-storage.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/player.factory.js"></script>
+    <script src="js/worldSoccerAPI.factory.js"></script>
     <script src="js/home.controller.js"></script>
     <script src="js/search.filter.js"></script>
     <script src="js/startFrom.filter.js"></script>
