@@ -1,12 +1,11 @@
 describe('Home Controller', function() {
-  var angular = require('../components/angular/angular');
-  beforeEach(angular.mock.module('worldcup-manager'));
 
   describe('Listing groups', function() {
+    var scope, countries;
+    beforeEach(angular.mock.module('worldcup-manager'));
 
-    var scope;
     beforeEach(angular.mock.inject(function ($rootScope, $controller) {
-      var countries, WorldSoccerAPI;
+      var WorldSoccerAPI;
 
       countries = [{
         name: 'Brasil',
@@ -20,17 +19,16 @@ describe('Home Controller', function() {
           losses: 0
         }
       }];
-      WorldSoccerAPI.all('countries', function (countries) { this.countries = countries; });
+      //WorldSoccerAPI.all('countries', function (countries) { this.countries = countries; });
 
       scope = $rootScope.$new();
-      $controller("Home", {
-        $scope: scope,
-        WorldSoccerAPI: WorldSoccerAPI
-      });
-    }));
+      $controller('Home', { $scope: scope });
+    });
 
-    it("should add groups to scope", function() {
+    it('should add groups to scope', function() {
       expect(scope.countries).toBe(countries);
     });
+
   });
 });
+
