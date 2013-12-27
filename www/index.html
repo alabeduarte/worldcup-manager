@@ -8,22 +8,19 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>The Worldcup Manager</title>
   </head>
-  <body ng:controller="Home">
-    <ol id="countries">
-      <li ng:repeat="country in countries">
-        <figure>
-          <img ng:src="{{ country.flag }}" alt="{{ country.name }}" />
-        </figure>
-      </li>
-    </ol>
+    <body>
+      <div ng-view></div>
 
-    <script type="text/javascript" src="phonegap.js"></script>
-    <script type="text/javascript" src="components/angular/angular.js"></script>
-    <script type="text/javascript" src="components/angular-route/angular-route.js"></script>
-    <script type="text/javascript" src="components/angular-touch/angular-touch.js"></script>
-    <script type="text/javascript" src="components/angular-local-storage/angular-local-storage.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/worldSoccerAPI.factory.js"></script>
-    <script src="js/home.controller.js"></script>
+      <script type="text/javascript" src="phonegap.js"></script>
+      <script type="text/javascript" src="components/angular/angular.js"></script>
+      <script type="text/javascript" src="components/angular-route/angular-route.js"></script>
+      <script type="text/javascript" src="components/angular-touch/angular-touch.js"></script>
+      <script type="text/javascript" src="components/angular-local-storage/angular-local-storage.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/worldSoccerAPI.factory.js"></script>
+      <script src="js/search.filter.js"></script>
+      <script src="js/startFrom.filter.js"></script>
+      <script src="js/home.controller.js"></script>
+      <script src="js/player.controller.js"></script>
   </body>
 </html>
