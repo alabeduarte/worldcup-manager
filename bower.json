@@ -13,6 +13,7 @@
     "angular": "1.2.4",
     "angular-route": "1.2.4",
     "angular-touch": "1.2.4",
-    "angular-local-storage": "*"
+    "angular-local-storage": "*",
+    "angular-mocks": "1.2.4"
   }
 }
