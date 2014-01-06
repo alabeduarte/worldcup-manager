@@ -9,7 +9,16 @@
     <title>The Worldcup Manager</title>
   </head>
     <body>
-      <div ng-view></div>
+    <input id='menu-checkbox' type='checkbox'>
+    <nav id='menu'>Menu</nav>
+      <div id="header">
+        <label for='menu-checkbox' id='menu-btn'>
+          <span id='three-lines'>&#8801;</span>
+        </label>
+      </div>
+      <div id='content'>
+        <div ng-view></div>
+      </div>
 
       <script type="text/javascript" src="phonegap.js"></script>
       <script type="text/javascript" src="components/angular/angular.js"></script>

@@ -3,10 +3,13 @@ env = PATH=$$PATH:node_modules/.bin
 install:
 	@mkdir -p {platforms,plugins}
 	@npm install
+	@$(env) cordova plugin add org.apache.cordova.console
+	@$(env) cordova plugin add org.apache.cordova.network-information
+	@$(env) cordova plugin ls
 
-ios:;@$(env) phonegap run ios
+ios:;@$(env) cordova prepare ios
 
-android:;@$(env) phonegap run android
+android:;@$(env) cordova prepare android
 
 run:;@pushd www; python -m SimpleHTTPServer
 
