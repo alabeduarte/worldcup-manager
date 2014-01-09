@@ -3,7 +3,6 @@ env = PATH=$$PATH:node_modules/.bin
 install:
 	@mkdir -p {platforms,plugins}
 	@npm install
-	@npm install cordova -g
 	@cordova plugin add org.apache.cordova.console
 	@cordova plugin add org.apache.cordova.network-information
 	@cordova plugin ls
