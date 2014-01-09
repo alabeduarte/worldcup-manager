@@ -7,7 +7,10 @@ install:
 	@$(env) cordova plugin add org.apache.cordova.network-information
 	@$(env) cordova plugin ls
 
-ios:;@$(env) cordova prepare ios
+ios:
+	@$(env) cordova platform remove ios
+	@$(env) cordova platform add ios
+	@$(env) phonegap build ios
 
 android:;@$(env) cordova prepare android
 
