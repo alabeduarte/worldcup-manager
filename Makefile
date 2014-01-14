@@ -7,6 +7,9 @@ install:
 	@cordova plugin add org.apache.cordova.network-information
 	@cordova plugin ls
 
+prepare:
+	@cordova prepare
+
 ios:
 	@cordova platform remove ios
 	@cordova platform add ios

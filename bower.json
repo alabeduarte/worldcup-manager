@@ -10,10 +10,10 @@
     "www/components"
   ],
   "dependencies": {
-    "angular": "1.2.7",
-    "angular-route": "1.2.7",
-    "angular-touch": "1.2.7",
+    "angular": "1.2.8",
+    "angular-route": "1.2.8",
+    "angular-touch": "1.2.8",
     "angular-local-storage": "*",
-    "angular-mocks": "1.2.7"
+    "angular-mocks": "1.2.8"
   }
 }
