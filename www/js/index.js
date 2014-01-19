@@ -1,15 +1,13 @@
 var app = {
   initialize: function() {
-    this.bindEvents();
-  },
-  bindEvents: function() {
-    document.addEventListener('deviceready', this.onDeviceReady, true);
-  },
+    document.addEventListener('deviceready', function() {
+      console.log('device ready!');
 
-  onDeviceReady: function() {
-    angular.element(document).ready(function() {
-      alert('app:deviceready');
-      angular.bootstrap(document);
-    });
-  },
+      angular.element(document).ready(function() {
+        console.log('angular ready!');
+
+        angular.bootstrap(document, ['worldcup-manager']);
+      });
+    }, true);
+  }
 };

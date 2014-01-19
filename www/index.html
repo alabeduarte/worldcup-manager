@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="worldcup-manager">
+<html xmlns:ng="http://angularjs.org">
   <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -20,14 +20,21 @@
         <div ng-view></div>
       </div>
 
-      <script type="text/javascript" src="phonegap.js"></script>
-      <script type="text/javascript" src="components/angular/angular.js"></script>
-      <script type="text/javascript" src="components/angular-route/angular-route.js"></script>
-      <script type="text/javascript" src="components/angular-touch/angular-touch.js"></script>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="components/angular/angular.min.js"></script>
+      <script type="text/javascript" src="components/angular-route/angular-route.min.js"></script>
+      <script type="text/javascript" src="components/angular-touch/angular-touch.min.js"></script>
       <script type="text/javascript" src="components/angular-local-storage/angular-local-storage.min.js"></script>
+      <script src="js/index.js"></script>
+
       <script src="js/routes.js"></script>
-      <script src="js/worldSoccerAPI.factory.js"></script>
-      <script src="js/home.controller.js"></script>
+      <script src="js/worldSoccerApi.js"></script>
+      <script src="js/country.controller.js"></script>
       <script src="js/player.controller.js"></script>
+
+      <script type="text/javascript">
+        app.initialize();
+      </script>
+
   </body>
 </html>

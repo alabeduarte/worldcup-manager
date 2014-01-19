@@ -1,9 +1,9 @@
-angular.module('worldcup-manager', ['LocalStorageModule', 'ngRoute'])
+angular.module('worldcup-manager', ['ngRoute', 'LocalStorageModule'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
       when('/countries', {
         templateUrl: 'partials/countries.html',
-        controller: 'Home'
+        controller: 'CountryController'
       }).
       when('/countries/:countryId/players', {
         templateUrl: 'partials/players.html',
