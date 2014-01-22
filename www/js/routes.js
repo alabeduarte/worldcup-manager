@@ -1,4 +1,7 @@
-angular.module('worldcup-manager', ['ngRoute', 'LocalStorageModule'])
+angular.module('worldcup-manager', ['ngRoute', 'LocalStorageModule', 'snap'])
+  .config(['snapRemoteProvider', function (snapRemoteProvider) {
+    snapRemoteProvider.globalOptions.disable = 'right';
+  }])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
       when('/countries', {

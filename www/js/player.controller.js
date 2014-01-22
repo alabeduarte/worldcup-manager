@@ -4,4 +4,5 @@ angular.module('worldcup-manager')
   WorldSoccerAPI.all('countries/' + countryId + '/players', function (players) {
     $scope.players = players;
   });
+  // $scope.icon = 'ion-ios7-arrow-back';
 }]);
