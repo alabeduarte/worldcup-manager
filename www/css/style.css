@@ -56,6 +56,7 @@ body, input {
 
 #players figcaption {
   float: right;
+  text-align: center;
   font-weight: 100;
   font-size: .8em;
   transition: all 250ms;
@@ -70,11 +71,31 @@ body, input {
   height: 30px;
 }
 
+#players .checkbox {
+  float: right;
+}
+
+#field {
+  float: right;
+  width: 120px;
+}
+
+#field img {
+  z-index:-1;
+  position: absolute;
+  clip: rect(0px, 160px, 493px, 0px);
+}
+
 .snap-content {
-  margin-top: 15%;
+  margin-top: 14%;
   background-color: #FFFFFF;
 }
 
 .snap-drawer-left {
   background-color: #D3D345;
+}
+
+.button.button-icon {
+  text-align: left;
+  width: 80px;
 }

@@ -1,8 +1,16 @@
+<div id="field">
+  <figure>
+    <img src="img/soccer-field.png" />
+  </figure>
+</div>
 <ol id="players">
   <li ng:repeat="player in players">
     <figure>
-      <figcaption>{{ player.fullName }}</figcaption>
+      <label class="checkbox">
+        <input type="checkbox">
+      </label>
       <img ng:src="{{ player.photo }}" alt="{{ player.fullName }}" />
+      <figcaption>{{ player.fullName }} ({{ player.position }})</figcaption>
     </figure>
   </li>
 </ol>
