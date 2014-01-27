@@ -75,15 +75,16 @@ body, input {
   float: right;
 }
 
-#field {
-  float: right;
-  width: 120px;
-}
-
 #field img {
-  z-index:-1;
-  position: absolute;
-  clip: rect(0px, 160px, 493px, 0px);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 80%;
+  -webkit-transform: perspective( 600px ) rotateX( 45deg );
+  -moz-transform: perspective( 600px ) rotateX( 45deg );
+  -o-transform: perspective( 600px ) rotateX( 45deg );
+  transform: perspective( 600px ) rotateX( 45deg );
 }
 
 .snap-content {
