@@ -76,17 +76,32 @@ body, input {
 }
 
 #field figure {
-  background-image: url('http://localhost:8000/img/soccer-field.png');
+  background: url('http://localhost:8000/img/soccer-field.png');
+  background-size: 100% 100%;
+  width: 358px;
+  height: 493px;
   background-color: green;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 358px;
-  height: 493px;
   -webkit-transform: perspective( 600px ) rotateX( 45deg );
   -moz-transform: perspective( 600px ) rotateX( 45deg );
   -o-transform: perspective( 600px ) rotateX( 45deg );
   transform: perspective( 600px ) rotateX( 45deg );
+}
+
+@media screen and (min-width: 56em) {
+  #field figure {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  #field figure {
+    width: 250px;
+    height: 345px;
+  }
 }
 
 #slots {
