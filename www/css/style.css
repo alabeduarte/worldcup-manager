@@ -77,16 +77,16 @@ body, input {
 
 #field figure {
   background-image: url('http://localhost:8000/img/soccer-field.png');
+  background-color: green;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 358px;
+  height: 493px;
   -webkit-transform: perspective( 600px ) rotateX( 45deg );
   -moz-transform: perspective( 600px ) rotateX( 45deg );
   -o-transform: perspective( 600px ) rotateX( 45deg );
   transform: perspective( 600px ) rotateX( 45deg );
-  width: 300px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  border: 2px solid blue;
 }
 
 #slots {
@@ -94,23 +94,42 @@ body, input {
   width: 100%;
   height: 100%;
   border: 2px solid red;
+  position: relative;
 }
 
 #slots ul {
   list-style: none;
+  text-align: center;
+  border: 2px solid blue;
+  padding: 0;
+  right: 0;
+  left:0;
+  position: absolute;
 }
 
 #slots li {
   list-style: none;
   display: inline-block;
+  border: 2px solid red;
+  margin: 0;
+  padding: 0;
 }
 
 #slots input[type='checkbox'] {
-  margin: 10px;
+  margin: 15px;
 }
 
 #foward {
   border: 2px solid yellow;
+  top: 14%;
+}
+
+#middle {
+  top: 42%;
+}
+
+#back {
+  bottom: 19%;
 }
 
 .snap-content {
