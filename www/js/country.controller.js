@@ -1,8 +1,6 @@
 angular.module('worldcup-manager')
 .controller('CountryController', ['$scope', 'WorldSoccerAPI', function ($scope, WorldSoccerAPI) {
-  $scope.loading = true;
-  WorldSoccerAPI.all('/countries', function (countries) {
+  WorldSoccerAPI.get('/countries', function (countries) {
     $scope.countries = countries;
-    $scope.loading = false;
   });
 }]);

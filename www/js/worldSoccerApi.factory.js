@@ -1,16 +1,8 @@
 angular.module('worldcup-manager')
-  .factory('WorldSoccerAPI', ['$http', 'localStorageService', function ($http, localStorage) {
+  .factory('WorldSoccerAPI', ['CustomHttpRequest', function (CustomHttpRequest) {
       return {
-        all: function (key, success) {
-          localStorage.clearAll();
-          // if (localStorage.get(key)) return success(localStorage.get(key));
-
-          $http.get('http://worldsoccer-api.herokuapp.com' + key, {
-              transformResponse: function (data) {
-                localStorage.add(key, data);
-                success(localStorage.get(key));
-              }
-            });
+        get: function (uri, success) {
+          CustomHttpRequest.get('http://worldsoccer-api.herokuapp.com' + uri, success);
         }
       };
   }]);
