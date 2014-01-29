@@ -16,8 +16,6 @@ describe('Country Controller', function() {
       }
     }];
 
-    beforeEach(angular.mock.module('worldcup-manager'));
-
     beforeEach(angular.mock.inject(function ($rootScope, $controller) {
       scope = $rootScope.$new();
       $controller('CountryController', {

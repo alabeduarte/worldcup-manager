@@ -25,6 +25,7 @@ module.exports = function(config) {
       '../js/index.js',
       '../js/routes.js',
       '../js/*.js',
+      'testHelper.js',
       '*.spec.js'
     ],
 
