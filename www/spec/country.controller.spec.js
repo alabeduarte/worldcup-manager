@@ -20,7 +20,7 @@ describe('Country Controller', function() {
       scope = $rootScope.$new();
       $controller('CountryController', {
         $scope: scope,
-        WorldSoccerAPI: { get: function(uri, suc) {suc(countries);} }
+        WorldSoccerAPI: { get: function(uri, success) { success(countries); } }
       });
     }));
 
