@@ -22,6 +22,16 @@ describe('Player Controller', function() {
       }
     ];
 
+    var formations = [
+      '4-4-2',
+      '4-5-1',
+      '4-3-3',
+      '3-4-3',
+      '3-5-2',
+      '5-3-2',
+      '5-4-1'
+    ];
+
     beforeEach(angular.mock.inject(function ($rootScope, $controller) {
       scope = $rootScope.$new();
       $controller('PlayerController', {
@@ -31,7 +41,15 @@ describe('Player Controller', function() {
     }));
 
     it('should add players to scope', function() {
-      expect(scope.players).toBe(players);
+      expect(scope.team.players).toBe(players);
+    });
+
+    it('should add formations to scope', function() {
+      expect(scope.team.formations).toEqual(formations);
+    });
+
+    it('should select 4-4-2 by default', function() {
+      expect(scope.formation).toEqual('4-4-2');
     });
 
   });
