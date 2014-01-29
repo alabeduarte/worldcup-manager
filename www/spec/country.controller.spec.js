@@ -1,4 +1,4 @@
-describe('Home Controller', function() {
+describe('Country Controller', function() {
 
   describe('Listing groups', function() {
 
@@ -20,9 +20,9 @@ describe('Home Controller', function() {
 
     beforeEach(angular.mock.inject(function ($rootScope, $controller) {
       scope = $rootScope.$new();
-      $controller('Home', {
+      $controller('CountryController', {
         $scope: scope,
-        WorldSoccerAPI: { all: function(key, suc) {suc(countries);} }
+        WorldSoccerAPI: { get: function(uri, suc) {suc(countries);} }
       });
     }));
 

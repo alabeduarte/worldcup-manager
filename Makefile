@@ -1,4 +1,5 @@
 env = PATH=$$PATH:node_modules/.bin
+karma = PATH=$$PATH:node_modules/.bin/karma
 
 install:
 	@mkdir -p {platforms,plugins}
@@ -22,5 +23,5 @@ android:
 
 run:;@pushd www; python -m SimpleHTTPServer
 
-test:;@pushd www/spec; $(env) karma start karma.config.js
+test:;@$(env) karma start www/spec/karma.config.js
 	#@$(env) jasmine-node --test-dir www/spec
