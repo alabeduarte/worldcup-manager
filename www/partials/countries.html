@@ -1,8 +1,9 @@
+<span ng-show="loading" class="ion-loading-c"></span>
 <ol id="countries">
   <li ng:repeat="country in countries">
     <figure>
       <a href="#/countries/{{country.countryId}}/players">
-        <img ng:src="{{ country.flag }}" alt="{{ country.name }}" />
+        <img ng:src="{{country.flag}}" alt="{{country.name}}" />
       </a>
     </figure>
   </li>

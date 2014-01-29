@@ -5,7 +5,7 @@ angular.module('worldcup-manager')
           localStorage.clearAll();
           // if (localStorage.get(key)) return success(localStorage.get(key));
 
-          $http.get('http://worldsoccer-api.herokuapp.com/' + key, {
+          $http.get('http://worldsoccer-api.herokuapp.com' + key, {
               transformResponse: function (data) {
                 localStorage.add(key, data);
                 success(localStorage.get(key));
