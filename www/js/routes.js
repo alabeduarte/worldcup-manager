@@ -1,4 +1,4 @@
-angular.module('worldcup-manager', ['ngRoute', 'LocalStorageModule', 'snap'])
+angular.module('worldcup-manager', ['ngRoute', 'ngTouch', 'LocalStorageModule', 'snap'])
   .config(['snapRemoteProvider', function (snapRemoteProvider) {
     snapRemoteProvider.globalOptions.disable = 'right';
   }])
