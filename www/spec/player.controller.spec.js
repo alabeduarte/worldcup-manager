@@ -23,20 +23,28 @@ describe('Player Controller', function() {
     ];
 
     var formations = [
-      '4-4-2',
-      '4-5-1',
-      '4-3-3',
-      '3-4-3',
-      '3-5-2',
-      '5-3-2',
-      '5-4-1'
+      {
+        back  : 4,
+        middle: 4,
+        foward: 2,
+        scheme: '4-4-2'
+      }
     ];
 
     beforeEach(angular.mock.inject(function ($rootScope, $controller) {
       scope = $rootScope.$new();
       $controller('PlayerController', {
         $scope: scope,
-        WorldSoccerAPI: { get: function(uri, success) { success(players); } }
+        WorldSoccerAPI: {
+          get: function(uri, success) {
+            success(players);
+          }
+        },
+        Formations: {
+          list: function() {
+            return formations;
+          }
+        }
       });
     }));
 
@@ -49,7 +57,7 @@ describe('Player Controller', function() {
     });
 
     it('should select 4-4-2 by default', function() {
-      expect(scope.formation).toEqual('4-4-2');
+      expect(scope.formation.scheme).toBe('4-4-2');
     });
 
   });
