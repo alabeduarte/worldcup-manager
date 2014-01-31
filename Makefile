@@ -1,5 +1,4 @@
 env = PATH=$$PATH:node_modules/.bin
-karma = PATH=$$PATH:node_modules/.bin/karma
 
 install:
 	@mkdir -p {platforms,plugins}
