@@ -1,5 +1,7 @@
 angular.module('worldcup-manager')
-  .factory('CustomHttpRequest', ['$http', '$rootScope', 'localStorageService', function ($http, $rootScope, localStorage) {
+  .factory('CustomHttpRequest',
+    ['$http', '$rootScope', 'localStorageService',
+    function ($http, $rootScope, localStorage) {
       return {
         get: function (url, success) {
           $rootScope.loading = true;
@@ -15,4 +17,4 @@ angular.module('worldcup-manager')
             });
         }
       };
-  }]);
+    }]);

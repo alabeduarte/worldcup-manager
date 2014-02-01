@@ -1,12 +1,8 @@
 describe('Formations Factory', function() {
-  var factory;
 
-  beforeEach(function () {
-    angular.module('worldcup-manager');
-    inject(function (Formations) {
-      factory = Formations;
-    });
-  });
+  it('should get an instance of Formations factory', inject(function (Formations) {
+    expect(Formations).toBeDefined();
+  }));
 
   describe('Listing Formations', function() {
     var expectedFormations = [
@@ -47,14 +43,9 @@ describe('Formations Factory', function() {
       }
     ];
 
-    it('should list all formations', function() {
-      var formations = factory.list();
-      expect(expectedFormations).toEqual(formations);
-    });
-
-  });
-
-  describe('Listing Formations', function() {
+    it('should list all formations', inject(function (Formations) {
+      expect(expectedFormations).toEqual(Formations.list());
+    }));
 
   });
 
