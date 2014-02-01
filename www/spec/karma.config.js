@@ -24,9 +24,9 @@ module.exports = function(config) {
       '../components/angular-snap/angular-snap.min.js',
       '../js/index.js',
       '../js/routes.js',
-      '../js/*.js',
+      '../js/**/*.js',
       'testHelper.js',
-      '*.spec.js'
+      '**/*.spec.js'
     ],
 
 

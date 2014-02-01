@@ -10,7 +10,7 @@ angular.module('worldcup-manager', ['ngRoute', 'ngTouch', 'LocalStorageModule', 
       }).
       when('/countries/:countryId/players', {
         templateUrl: 'partials/players.html',
-        controller: 'PlayerController'
+        controller: 'FormationController'
       }).
       otherwise({
         redirectTo: '/countries'
