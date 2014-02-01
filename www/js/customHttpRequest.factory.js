@@ -9,12 +9,12 @@ angular.module('worldcup-manager')
           // if (localStorage.get(url)) return success(localStorage.get(url));
 
           $http.get(url, {
-              transformResponse: function (data) {
-                localStorage.add(url, data);
-                success(localStorage.get(url));
-                $rootScope.loading = false;
-              }
-            });
+            transformResponse: function (data) {
+              localStorage.add(url, data);
+              success(localStorage.get(url));
+              $rootScope.loading = false;
+            }
+          });
         }
       };
     }]);

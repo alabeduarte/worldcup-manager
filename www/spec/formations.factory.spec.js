@@ -1,4 +1,4 @@
-describe('Formations Factory', function() {
+describe('Formations', function() {
 
   it('should get an instance of Formations factory', inject(function (Formations) {
     expect(Formations).toBeDefined();
