@@ -57,7 +57,7 @@ describe('Player Controller', function() {
     });
 
     it('should select 4-4-2 by default', function() {
-      expect(scope.formation.scheme).toBe('4-4-1');
+      expect(scope.formation.scheme).toBe('4-4-2');
     });
 
   });
