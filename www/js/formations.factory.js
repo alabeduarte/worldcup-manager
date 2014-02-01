@@ -1,7 +1,14 @@
 angular.module('worldcup-manager').factory('Formations', function () {
   return {
+    format: function (formations) {
+      for (var i = 0; i < formations.length; i++) {
+        var formation = formations[i];
+        formation.scheme = formation.back + '-' + formation.middle + '-' + formation.foward;
+      };
+      return formations;
+    },
     list: function () {
-      return [
+      return this.format([
         {
           back  : 4,
           middle: 4,
@@ -37,7 +44,7 @@ angular.module('worldcup-manager').factory('Formations', function () {
           middle: 4,
           foward: 1
         }
-      ];
+      ]);
     }
   }
 });

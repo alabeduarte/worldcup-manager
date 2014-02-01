@@ -1,62 +1,27 @@
 <span ng-show="loading" class="ion-loading-c"></span>
 <section id="formations">
-  <select ng-model="formation" ng-options="formation.scheme for formation in team.formations">
+  <select ng-model="selectedFormation" ng-options="selectedFormation.scheme for selectedFormation in team.formations">
   </select>
 </section>
 <div id="field">
   <figure>
     <section id="slots">
       <ul id="foward">
-        <li>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-        <li>
+        <li ng-repeat="i in getNumber(selectedFormation.foward) track by $index">
           <label class="checkbox">
             <input type="checkbox">
           </label>
         </li>
       </ul>
       <ul id="middle">
-        <li>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-        <li>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-        <li>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-        <li>
+        <li ng-repeat="i in getNumber(selectedFormation.middle) track by $index">
           <label class="checkbox">
             <input type="checkbox">
           </label>
         </li>
       </ul>
       <ul id="back">
-        <li>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-        <li>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-        <li>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-        <li>
+        <li ng-repeat="i in getNumber(selectedFormation.back) track by $index">
           <label class="checkbox">
             <input type="checkbox">
           </label>
@@ -73,12 +38,12 @@
   </figure>
 </div>
 <ol id="players">
-  <li ng:repeat="player in team.players">
+  <li ng-repeat="player in team.players">
     <figure>
       <label class="checkbox">
         <input type="checkbox">
       </label>
-      <img ng:src="{{ player.photo }}" alt="{{ player.fullName }}" />
+      <img ng-src="{{ player.photo }}" alt="{{ player.fullName }}" />
       <figcaption>{{ player.fullName }} ({{ player.position }})</figcaption>
     </figure>
   </li>

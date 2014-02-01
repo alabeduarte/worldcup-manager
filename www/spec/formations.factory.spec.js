@@ -4,47 +4,33 @@ describe('Formations', function() {
     expect(Formations).toBeDefined();
   }));
 
-  describe('Listing Formations', function() {
+  describe('Formations list', function () {
+    var allFormations;
     var expectedFormations = [
       {
         back  : 4,
         middle: 4,
-        foward: 2
+        foward: 2,
+        scheme: '4-4-2'
       },
       {
         back  : 4,
         middle: 5,
-        foward: 1
-      },
-      {
-        back  : 4,
-        middle: 3,
-        foward: 3
-      },
-      {
-        back  : 3,
-        middle: 4,
-        foward: 3
-      },
-      {
-        back  : 3,
-        middle: 5,
-        foward: 2
-      },
-      {
-        back  : 5,
-        middle: 3,
-        foward: 2
-      },
-      {
-        back  : 5,
-        middle: 4,
-        foward: 1
+        foward: 1,
+        scheme: '4-5-1'
       }
     ];
 
+    beforeEach(inject(function (Formations) { allFormations = Formations.list(); }));
+
     it('should list all formations', inject(function (Formations) {
-      expect(expectedFormations).toEqual(Formations.list());
+      expect(expectedFormations[0]).toEqual(allFormations[0]);
+      expect(expectedFormations[1]).toEqual(allFormations[1]);
+    }));
+
+    it('should format a scheme', inject(function (Formations) {
+      expect(allFormations[0].scheme).toBe('4-4-2');
+      expect(allFormations[1].scheme).toBe('4-5-1');
     }));
 
   });
