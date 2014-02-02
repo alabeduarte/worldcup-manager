@@ -4,45 +4,33 @@
   </select>
 </section>
 <div id="field">
-  <figure>
-    <section id="slots">
-      <ul id="foward">
-        <li ng-repeat="i in getNumber(selectedFormation.foward) track by $index">
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-      </ul>
-      <ul id="middle">
-        <li ng-repeat="i in getNumber(selectedFormation.middle) track by $index">
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-      </ul>
-      <ul id="back">
-        <li ng-repeat="i in getNumber(selectedFormation.back) track by $index">
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-      </ul>
-      <ul id="goal-keeper">
-        <li>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </li>
-      </ul>
-    </section>
-  </figure>
+  <span></span>
+  <section id="slots">
+    <ul id="foward">
+      <li class="player ion-person" ng-repeat="i in getNumber(selectedFormation.foward) track by $index">
+        <img ng-src="" />
+      </li>
+    </ul>
+    <ul id="middle">
+      <li class="player ion-person" ng-repeat="i in getNumber(selectedFormation.middle) track by $index">
+        <img ng-src="" />
+      </li>
+    </ul>
+    <ul id="back">
+      <li class="player ion-person" ng-repeat="i in getNumber(selectedFormation.back) track by $index">
+        <img ng-src="" />
+      </li>
+    </ul>
+    <ul id="goal-keeper">
+      <li class="player ion-person">
+        <img ng-src="" />
+      </li>
+    </ul>
+  </section>
 </div>
 <ol id="players">
   <li ng-repeat="player in team.players">
     <figure>
-      <label class="checkbox">
-        <input type="checkbox">
-      </label>
       <img ng-src="{{ player.photo }}" alt="{{ player.fullName }}" />
       <figcaption>{{ player.fullName }} ({{ player.position }})</figcaption>
     </figure>

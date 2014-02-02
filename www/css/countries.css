@@ -1,0 +1,22 @@
+#countries {
+  list-style: none;
+}
+
+#countries li {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#countries figure {
+  padding: 0;
+  margin: 0;
+}
+
+#countries img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 60px;
+  height: 60px;
+}
