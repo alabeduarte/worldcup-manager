@@ -4,13 +4,13 @@ angular.module('worldcup-manager')
   var formations = Formations.list();
 
   WorldSoccerAPI.get('/countries/' + countryId + '/players', function (players) {
-    $scope.team = {
-      players     :  players,
-      formations  :  formations
-    };
-    $scope.selectedFormation = formations[0];
+    $scope.players = players;
+    $scope.formations =  formations;
+    $scope.selectedFormation = new SelectedFormation(formations[0]);
+
     $scope.getNumber = function (number) {
       return new Array(number);
     }
+
   });
 }]);

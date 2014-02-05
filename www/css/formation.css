@@ -5,7 +5,7 @@
 }
 
 #field span {
-  background: url('http://localhost:8000/img/soccer-field.png');
+  background: url('../img/soccer-field.png');
   background-size: 100% 100%;
   width: 358px;
   height: 493px;

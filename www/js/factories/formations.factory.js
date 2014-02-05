@@ -1,10 +1,9 @@
 angular.module('worldcup-manager').factory('Formations', function () {
   return {
     format: function (formations) {
-      for (var i = 0; i < formations.length; i++) {
-        var formation = formations[i];
+      angular.forEach(formations, function(formation) {
         formation.scheme = formation.back + '-' + formation.middle + '-' + formation.foward;
-      };
+      });
       return formations;
     },
     list: function () {

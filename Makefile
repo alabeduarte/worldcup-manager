@@ -23,4 +23,3 @@ android:
 run:;@pushd www; python -m SimpleHTTPServer
 
 test:;@$(env) karma start www/spec/karma.config.js
-	#@$(env) jasmine-node --test-dir www/spec

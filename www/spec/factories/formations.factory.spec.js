@@ -32,7 +32,6 @@ describe('Formations', function() {
       expect(allFormations[0].scheme).toBe('4-4-2');
       expect(allFormations[1].scheme).toBe('4-5-1');
     }));
-
   });
 
 });

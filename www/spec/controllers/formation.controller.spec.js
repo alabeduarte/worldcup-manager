@@ -47,13 +47,13 @@ describe('FormationController', function() {
 
   describe('Listing players', function() {
     it('should add players to scope', function() {
-      expect(scope.team.players).toBe(players);
+      expect(scope.players).toBe(players);
     });
   });
 
   describe('Listing formations', function() {
     it('should add formations to scope', function() {
-      expect(scope.team.formations).toEqual(formations);
+      expect(scope.formations).toEqual(formations);
     });
 
     it('should select 4-4-2 by default', function() {
