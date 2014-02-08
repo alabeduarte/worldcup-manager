@@ -1,29 +1,41 @@
 #formations select {
-  display: block;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
 }
 
-#field span {
-  background: url('../img/soccer-field.png');
-  background-size: 100% 100%;
+#field {
+  position: relative;
   width: 358px;
   height: 493px;
-  background-color: green;
-  display: block;
   margin-top: -55px;
   margin-left: auto;
   margin-right: auto;
+  z-index: -1;
+}
+
+#field:after {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  content:'';
   -webkit-transform: perspective( 600px ) rotateX( 45deg );
   -moz-transform: perspective( 600px ) rotateX( 45deg );
   -o-transform: perspective( 600px ) rotateX( 45deg );
   transform: perspective( 600px ) rotateX( 45deg );
+  background-color: green;
+  background: url('../img/soccer-field.png');
+  background-size: 100% 100%;
+  z-index: -1;
 }
 
 #slots {
-  float: left;
+  position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 #slots ul {
@@ -36,23 +48,23 @@
 
 #slots li {
   display: inline-block;
-  margin: 3%;
+  margin: 5%;
 }
 
 #foward {
-  top: 14%;
+  top: 26%;
 }
 
 #middle {
-  top: 30%;
+  top: 43%;
 }
 
 #back {
-  bottom: 40%;
+  bottom: 24%;
 }
 
 #goal-keeper {
-  bottom: 30%;
+  bottom: 7%;
 }
 
 .player img {
@@ -70,7 +82,7 @@
 }
 
 @media screen and (max-width: 56em) {
-  #field span {
+  #field {
     width: 250px;
     height: 345px;
   }
