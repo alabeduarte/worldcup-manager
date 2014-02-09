@@ -10,9 +10,16 @@ angular.module('worldcup-manager')
     var index = _.indexOf(formations, formation);
     $scope.selectedFormation = formations[index];
   };
-  $scope.wantToSelect = function () {
+  $scope.wantToSelect = function (index) {
+    console.log('index', index);
     $scope.selectedFormation.wantToSelect = true;
-  }
+  };
+
+  $scope.playerAlreadySelected = function (index) {
+    if ($scope.selectedFormation.wantToSelect && index === 0) {
+      return true;
+    } else return false;
+  };
 
   WorldSoccerAPI.get('/countries/' + countryId + '/players', function (players) {
     $scope.players = players;

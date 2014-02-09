@@ -9,7 +9,8 @@
       <li>
         <ul id="foward">
           <li class="player" ng-repeat="i in getNumber(selectedFormation.foward) track by $index">
-            <button class="ion-person" ng-click="wantToSelect()" />
+            <button class="ion-person" ng-click="wantToSelect($index)" ng-hide="playerAlreadySelected($index)"></button>
+            <img ng-show="playerAlreadySelected($index)" ng-src="http://cdn.soccerwiki.org/images/player/48_1350751881.jpg" alt="Eric DJEMBA-DJEMBA" src="http://cdn.soccerwiki.org/images/player/48_1350751881.jpg">
           </li>
         </ul>
       </li>
