@@ -5,33 +5,42 @@
 </section>
 <div id="field">
   <section id="slots">
-    <ul id="foward">
-      <li class="player ion-person" ng-repeat="i in getNumber(selectedFormation.foward) track by $index">
-        <img ng-src="" />
+    <ol>
+      <li>
+        <ul id="foward">
+          <li class="player" ng-repeat="i in getNumber(selectedFormation.foward) track by $index">
+            <button class="ion-person" ng-click="wantToSelect()" />
+          </li>
+        </ul>
       </li>
-    </ul>
-    <ul id="middle">
-      <li class="player ion-person" ng-repeat="i in getNumber(selectedFormation.middle) track by $index">
-        <img ng-src="" />
+      <li>
+        <ul id="middle">
+          <li class="player" ng-repeat="i in getNumber(selectedFormation.middle) track by $index">
+            <button class="ion-person" ng-click="wantToSelect()" />
+          </li>
+        </ul>
       </li>
-    </ul>
-    <ul id="back">
-      <li class="player ion-person" ng-repeat="i in getNumber(selectedFormation.back) track by $index">
-        <img ng-src="" />
+      <li>
+        <ul id="back">
+          <li class="player" ng-repeat="i in getNumber(selectedFormation.back) track by $index">
+            <button class="ion-person" ng-click="wantToSelect()" />
+          </li>
+        </ul>
       </li>
-    </ul>
-    <ul id="goal-keeper">
-      <li class="player ion-person">
-        <img ng-src="" />
+      <li>
+        <ul id="goal-keeper">
+          <li class="player">
+            <button class="ion-person" ng-click="wantToSelect()" />
+          </li>
+        </ul>
       </li>
-    </ul>
+    </ol>
   </section>
 </div>
-<ol id="players">
+<ol id="players" ng-show="selectedFormation.wantToSelect">
   <li ng-repeat="player in players">
     <figure>
       <img ng-src="{{ player.photo }}" alt="{{ player.fullName }}" />
-      <figcaption>{{ player.fullName }} ({{ player.position }})</figcaption>
     </figure>
   </li>
 </ol>

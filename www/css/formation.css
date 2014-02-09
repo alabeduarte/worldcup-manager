@@ -5,12 +5,9 @@
 }
 
 #field {
-  position: relative;
   width: 358px;
   height: 493px;
   margin-top: -55px;
-  margin-left: auto;
-  margin-right: auto;
   z-index: -1;
 }
 
@@ -20,7 +17,11 @@
   left:0;
   right:0;
   bottom:0;
+  width: 358px;
+  height: 493px;
   content:'';
+  margin-left: auto;
+  margin-right: auto;
   -webkit-transform: perspective( 600px ) rotateX( 45deg );
   -moz-transform: perspective( 600px ) rotateX( 45deg );
   -o-transform: perspective( 600px ) rotateX( 45deg );
@@ -28,6 +29,7 @@
   background-color: green;
   background: url('../img/soccer-field.png');
   background-size: 100% 100%;
+  background-position:center;
   z-index: -1;
 }
 
@@ -36,6 +38,11 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+  top: 22%;
+}
+
+#slots ol li {
+  padding-bottom: 19%;
 }
 
 #slots ul {
@@ -46,25 +53,14 @@
   position: absolute;
 }
 
-#slots li {
+#slots ul li {
   display: inline-block;
-  margin: 5%;
+  margin: 1%;
 }
 
-#foward {
-  top: 26%;
-}
-
-#middle {
-  top: 43%;
-}
-
-#back {
-  bottom: 24%;
-}
 
 #goal-keeper {
-  bottom: 7%;
+  bottom: 33%;
 }
 
 .player img {
@@ -83,6 +79,10 @@
 
 @media screen and (max-width: 56em) {
   #field {
+    width: 250px;
+    height: 345px;
+  }
+  #field:after {
     width: 250px;
     height: 345px;
   }

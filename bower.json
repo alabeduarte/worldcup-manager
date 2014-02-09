@@ -10,11 +10,11 @@
     "www/components"
   ],
   "dependencies": {
-    "angular": "1.2.8",
-    "angular-route": "1.2.8",
-    "angular-touch": "1.2.8",
+    "angular": "1.2.12",
+    "angular-route": "1.2.12",
+    "angular-touch": "1.2.12",
+    "angular-mocks": "1.2.12",
     "angular-local-storage": "*",
-    "angular-mocks": "1.2.8",
     "angular-snap": "*",
     "underscore": "1.5.2",
     "angular-underscore-module": "*",
