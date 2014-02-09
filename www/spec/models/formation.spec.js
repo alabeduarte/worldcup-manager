@@ -1,15 +1,9 @@
-describe('SelectedFormation', function() {
+describe('Formation', function() {
   var selectedFormation;
-  var formation442 = {
-    back  : 4,
-    middle: 4,
-    foward: 2,
-    scheme: '4-4-2'
-  }
   var player = { fullName: "Ronaldo" };
 
   beforeEach(function () {
-    selectedFormation = new SelectedFormation(formation442);
+    selectedFormation = new Formation(4, 4, 2);
   });
 
   it('should have the same structure of the formation', function() {

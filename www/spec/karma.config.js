@@ -20,6 +20,8 @@ module.exports = function(config) {
       '../components/angular-route/angular-route.min.js',
       '../components/angular-touch/angular-touch.min.js',
       '../components/angular-local-storage/angular-local-storage.min.js',
+      '../components/underscore/underscore-min.js',
+      '../components/angular-underscore-module/angular-underscore-module.js',
       '../components/snapjs/snap.min.js',
       '../components/angular-snap/angular-snap.min.js',
       '../js/index.js',

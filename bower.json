@@ -16,6 +16,8 @@
     "angular-local-storage": "*",
     "angular-mocks": "1.2.8",
     "angular-snap": "*",
+    "underscore": "1.5.2",
+    "angular-underscore-module": "*",
     "ionic": "0.9.20-alpha"
   }
 }

@@ -1,4 +1,4 @@
-describe('FormationController', function() {
+describe('FormationController', function () {
   var scope;
   var players = [
     {
@@ -19,14 +19,7 @@ describe('FormationController', function() {
     }
   ];
 
-  var formations = [
-    {
-      back  : 4,
-      middle: 4,
-      foward: 2,
-      scheme: '4-4-2'
-    }
-  ];
+  var formations = [ new Formation(4, 4, 2), new Formation(3, 4, 3) ];
 
   beforeEach(angular.mock.inject(function ($rootScope, $controller) {
     scope = $rootScope.$new();
@@ -37,27 +30,34 @@ describe('FormationController', function() {
           success(players);
         }
       },
-      Formations: {
-        list: function() {
+      FormationList: {
+        list: function () {
           return formations;
         }
       }
     });
   }));
 
-  describe('Listing players', function() {
-    it('should add players to scope', function() {
+  describe('Listing players', function () {
+    it('should add players to scope', function () {
       expect(scope.players).toBe(players);
     });
   });
 
-  describe('Listing formations', function() {
-    it('should add formations to scope', function() {
+  describe('Listing formations', function () {
+    it('should add formations to scope', function () {
       expect(scope.formations).toEqual(formations);
     });
 
-    it('should select 4-4-2 by default', function() {
+    it('should select 4-4-2 by default', function () {
       expect(scope.selectedFormation.scheme).toBe('4-4-2');
+    });
+
+    it('should change selected formation', function () {
+      var formation343 = formations[1];
+      scope.selectFormation(formation343);
+
+      expect(scope.selectedFormation.scheme).toBe('3-4-3');
     });
   });
 
