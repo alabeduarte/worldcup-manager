@@ -11,10 +11,13 @@ angular.module('worldcup-manager')
   };
 
   var selectSlot = function (Position, index) {
-    console.log(index);
     var formation = $scope.selectedFormation;
     $scope.selectedSlot = new Position(formation, index);
     $scope.selectedSlot.filled = true;
+
+    var player = $scope.selectedPlayer;
+    if (player) $scope.selectPlayer(player);
+    $scope.selectedPlayer = undefined;
   };
   $scope.selectFowardSlot = function (index) { selectSlot(Foward, index); };
   $scope.selectMiddleSlot = function (index) { selectSlot(Middle, index); };
@@ -22,7 +25,9 @@ angular.module('worldcup-manager')
   $scope.selectGoalkeeperSlot = function () { selectSlot(Goalkeeper); };
 
   $scope.selectPlayer = function (player) {
-    $scope.selectedSlot.add(player);
+    if ($scope.selectedSlot) $scope.selectedSlot.add(player);
+    else $scope.selectedPlayer = player;
+
     $scope.selectedSlot = undefined;
   };
 

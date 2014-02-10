@@ -16,11 +16,13 @@ describe('FormationController', function () {
     photo: "http://cdn.soccerwiki.org/images/player/1124.jpg",
     position: "RB"
   };
-  var players = [ GilbertoSilva, Kleberson ];
-
-  var formations = [ new Formation(4, 4, 2), new Formation(3, 4, 3) ];
+  var players;
+  var formations;
 
   beforeEach(angular.mock.inject(function ($rootScope, $controller) {
+    players = [ GilbertoSilva, Kleberson ];
+    formations = [ new Formation(4, 4, 2), new Formation(3, 4, 3) ];
+
     scope = $rootScope.$new();
     $controller('FormationController', {
       $scope: scope,
@@ -61,6 +63,20 @@ describe('FormationController', function () {
   });
 
   describe('Selecting a player', function () {
+    describe('Selecting slot to receive a player', function () {
+      it('should fill a empty slot with a player selection at foward position', function () {
+        scope.selectPlayer(GilbertoSilva);
+        expect(scope.selectedPlayer).toBe(GilbertoSilva);
+        expect(scope.selectedSlot).toBeUndefined();
+
+        scope.selectFowardSlot(0);
+
+        var slots = scope.selectedFormation.fowardSlots;
+
+        expect(slots[0]).toBe(GilbertoSilva);
+        expect(slots[0].id).toBeDefined();
+      });
+    });
     describe('Selecting slot to receive a player', function () {
       var assertPlayerSelection = function (slots, player) {
         expect(slots[0].id).toBe(undefined);
