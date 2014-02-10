@@ -1,3 +1,7 @@
+#players {
+  position: absolute;
+}
+
 #players li {
   display: inline-block;
   margin: 2px;

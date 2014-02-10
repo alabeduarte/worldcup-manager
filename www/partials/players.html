@@ -9,39 +9,42 @@
       <li>
         <ul id="foward">
           <li class="player" ng-repeat="i in getNumber(selectedFormation.foward) track by $index">
-            <button class="ion-person" ng-click="wantToSelect($index)" ng-hide="playerAlreadySelected($index)"></button>
-            <img ng-show="playerAlreadySelected($index)" ng-src="http://cdn.soccerwiki.org/images/player/48_1350751881.jpg" alt="Eric DJEMBA-DJEMBA" src="http://cdn.soccerwiki.org/images/player/48_1350751881.jpg">
+            <button class="ion-person" ng-click="selectFowardSlot($index)" ng-hide="selectedFormation.fowardSlots[$index].id"></button>
+            <img ng-show="selectedFormation.fowardSlots[$index].id" ng-src="{{ selectedFormation.fowardSlots[$index].photo }}" alt="{{ selectedFormation.fowardSlots[$index].fullName }}" >
           </li>
         </ul>
       </li>
       <li>
         <ul id="middle">
           <li class="player" ng-repeat="i in getNumber(selectedFormation.middle) track by $index">
-            <button class="ion-person" ng-click="wantToSelect()" />
+            <button class="ion-person" ng-click="selectMiddleSlot($index)" ng-hide="selectedFormation.middleSlots[$index].id"></button>
+            <img ng-show="selectedFormation.middleSlots[$index].id" ng-src="{{ selectedFormation.middleSlots[$index].photo }}" alt="{{ selectedFormation.middleSlots[$index].fullName }}" >
           </li>
         </ul>
       </li>
       <li>
         <ul id="back">
           <li class="player" ng-repeat="i in getNumber(selectedFormation.back) track by $index">
-            <button class="ion-person" ng-click="wantToSelect()" />
+            <button class="ion-person" ng-click="selectBackSlot($index)" ng-hide="selectedFormation.backSlots[$index].id"></button>
+            <img ng-show="selectedFormation.backSlots[$index].id" ng-src="{{ selectedFormation.backSlots[$index].photo }}" alt="{{ selectedFormation.backSlots[$index].fullName }}" >
           </li>
         </ul>
       </li>
       <li>
         <ul id="goal-keeper">
           <li class="player">
-            <button class="ion-person" ng-click="wantToSelect()" />
+            <button class="ion-person" ng-click="selectGoalkeeperSlot()" ng-hide="selectedFormation.goalkeeperSlot.id"></button>
+            <img ng-show="selectedFormation.goalkeeperSlot.id" ng-src="{{ selectedFormation.goalkeeperSlot.photo }}" alt="{{ selectedFormation.goalkeeperSlot.fullName }}" >
           </li>
         </ul>
       </li>
     </ol>
   </section>
 </div>
-<ol id="players" ng-show="selectedFormation.wantToSelect">
+<ol id="players">
   <li ng-repeat="player in players">
     <figure>
-      <img ng-src="{{ player.photo }}" alt="{{ player.fullName }}" />
+      <img ng-click="selectPlayer(player)" ng-src="{{ player.photo }}" alt="{{ player.fullName }}" />
     </figure>
   </li>
 </ol>
