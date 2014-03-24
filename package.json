@@ -2,12 +2,16 @@
   "name": "worldcup-manager",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "node_modules/.bin/bower install"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:alabeduarte/worldcup-manager.git"
   },
   "dependencies": {
+    "express": "~3.5.0",
     "phonegap": "~3.3.0-0.18.0",
     "cordova": "~3.3.1-0.3.1",
     "bower": "~1.2.7"
@@ -25,9 +29,6 @@
     "karma-coffee-preprocessor": "~0.1.1",
     "karma-phantomjs-launcher": "~0.1.1",
     "karma": "~0.10.8"
-  },
-  "scripts": {
-    "postinstall": "node_modules/.bin/bower install"
   },
   "author": "Alabê Duarte",
   "license": "BSD-2-Clause"
