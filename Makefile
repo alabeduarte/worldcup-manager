@@ -23,6 +23,6 @@ android:
 	@$(env) cordova platform add android
 	@$(env) phonegap run android --device
 
-run:;@pushd www; python -m SimpleHTTPServer
+run:;@npm start
 
 test:;@$(env) karma start www/spec/karma.config.js
