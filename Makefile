@@ -25,4 +25,4 @@ android:
 
 run:;@npm start
 
-test:;@$(env) karma start www/spec/karma.config.js
+test:;@$(env) karma start www/spec/karma.config.js --single-run --browsers PhantomJS
